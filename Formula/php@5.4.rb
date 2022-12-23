@@ -3,7 +3,7 @@ class PhpAT56 < Formula
   homepage "https://secure.php.net/"
   url "https://github.com/luzhaung/homebrew-php54/archive/php-5.4.45.tar.gz"
   version "5.4.45"
-  sha256 "49dc98dda388ae99e6542b0b6d395c13b58f0b35398b61d0860315e8b1e54988"
+  sha256 "25bc4723955f4e352935258002af14a14a9810b491a19400d76fcdfa9d04b28f"
   license "PHP-3.01"
   revision 5
 
