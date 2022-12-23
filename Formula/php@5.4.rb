@@ -1,4 +1,4 @@
-class PhpAT56 < Formula
+class PhpAT54 < Formula
   desc "General-purpose scripting language"
   homepage "https://secure.php.net/"
   url "https://github.com/luzhaung/homebrew-php54/archive/php-5.4.45.tar.gz"
