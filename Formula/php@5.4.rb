@@ -8,6 +8,14 @@ class PhpAT54 < Formula
   sha256 "25bc4723955f4e352935258002af14a14a9810b491a19400d76fcdfa9d04b28f"
   license "PHP-3.01"
 
+  bottle do
+      sha256 arm64_monterey: "cf198bc968322e35cc01d1a4b908bc0110db2225f9f1ddf90c0d5ef4f35d4c77"
+      sha256 arm64_big_sur:  "2e92c66072c5e49f1d58078335dc11701072ac91cd0c0e89f660759f4253a2c7"
+      sha256 monterey:       "b71e585579af140847c331d07cc9e21dc8e1029768306aa98a82e6ad94185a59"
+      sha256 big_sur:        "1bcf6a8777aa2236c6a1c9fa496698a9caacda0102799d500d84f3821a432b08"
+      sha256 x86_64_linux:   "53e23964de3ff3fa970b2dae5e68a3f15144acba62e94c74fdfaa5c18666ffd9"
+    end
+
   keg_only :versioned_formula
 
   depends_on "bison" => :build
@@ -103,7 +111,8 @@ class PhpAT54 < Formula
 
       # Each extension that is built on Mojave needs a direct reference to the
       # sdk path or it won't find the headers
-      headers_path = "=#{MacOS.sdk_path_if_needed}/usr"
+      headers_path = ""
+      headers_path = "=#{MacOS.sdk_path_if_needed}/usr" if OS.mac?
 
       args = %W[
         --prefix=#{prefix}
