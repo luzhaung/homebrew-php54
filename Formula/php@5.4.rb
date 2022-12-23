@@ -142,7 +142,7 @@ class PhpAT54 < Formula
     --with-gettext=#{Formula["gettext"].opt_prefix}
     --with-gmp=#{Formula["gmp"].opt_prefix}
     --with-iconv=#{Formula["libiconv"].opt_prefix}
-    --with-icu-dir=#{Formula["icu4c"].opt_prefix}
+    --with-icu-dir="/usr/local/lib"
     --with-jpeg-dir=#{Formula["jpeg"].opt_prefix}
     --with-kerberos#{headers_path}
     --with-layout=GNU
