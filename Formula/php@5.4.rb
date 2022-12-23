@@ -8,6 +8,8 @@ class PhpAT54 < Formula
   sha256 "25bc4723955f4e352935258002af14a14a9810b491a19400d76fcdfa9d04b28f"
   license "PHP-3.01"
 
+  keg_only :versioned_formula
+
   depends_on "bison" => :build
   depends_on "httpd" => [:build, :test]
   depends_on "pkg-config" => :build
