@@ -154,7 +154,7 @@ class PhpAT54 < Formula
     --with-mysql-sock=/tmp/mysql.sock
     --with-mysqli=mysqlnd
     --with-mysql=mysqlnd
-    --with-openssl=#{Formula["openssl@1.0"].opt_prefix}
+    --with-openssl=/opt/homebrew/opt/openssl@1.0
     --with-pdo-dblib=#{Formula["freetds"].opt_prefix}
     --with-pdo-mysql=mysqlnd
     --with-pdo-odbc=unixODBC,#{Formula["unixodbc"].opt_prefix}
@@ -204,7 +204,7 @@ class PhpAT54 < Formula
     end
 
     # Use OpenSSL cert bundle
-    openssl = Formula["openssl@1.0"]
+    openssl = "/opt/homebrew/opt/openssl@1.0"
     %w[development production].each do |mode|
     inreplace "php.ini-#{mode}", /; ?openssl\.cafile=/,
       "openssl.cafile = \"#{openssl.pkgetc}/cert.pem\""
