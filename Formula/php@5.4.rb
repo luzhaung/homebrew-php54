@@ -103,8 +103,7 @@ class PhpAT54 < Formula
 
       # Each extension that is built on Mojave needs a direct reference to the
       # sdk path or it won't find the headers
-      headers_path = ""
-      headers_path = "=#{MacOS.sdk_path_if_needed}/usr" if OS.mac?
+      headers_path = "=#{MacOS.sdk_path_if_needed}/usr"
 
       args = %W[
         --prefix=#{prefix}
